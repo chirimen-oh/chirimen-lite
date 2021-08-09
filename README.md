@@ -1,4 +1,4 @@
-# pi-gen
+# CHIRIMEN OS
 
 Tool used to create Raspberry Pi OS images. (Previously known as Raspbian).
 
