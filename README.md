@@ -1,7 +1,10 @@
-# pi-gen
+# CHIRIMEN OS
 
-Tool used to create Raspberry Pi OS images. (Previously known as Raspbian).
+**注意: 実験的バージョン**
 
+CHIRIMEN の OS イメージを作成するためのツールです。
+現在、Raspberry Pi OS Lite (32-bit) をベースにした Raspberry Pi Zero 向けのイメージのみサポートしています。
+[pi-gen](https://github.com/RPi-Distro/pi-gen) をもとに構築されています。
 
 ## Dependencies
 
