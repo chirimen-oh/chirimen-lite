@@ -13,7 +13,7 @@ jobs:
           depends=$(sed -f scripts/remove-comments.sed -e 's/[^ ]*://g' depends)
           sudo apt-get install $depends
           sudo ./build.sh
-      - uses: actions/github-script@v4
+      - uses: actions/github-script@v6
         with:
           script: |
             const script = require("./.github/scripts/release.js");
