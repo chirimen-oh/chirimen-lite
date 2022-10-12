@@ -37,6 +37,6 @@ module.exports = async function ({ version, github, context, glob }) {
 - ${name} (SHA256: \`${hash}\`)
 `;
 
-    await github.repos.updateRelease({ ...target, prerelease: false, body });
+    await github.rest.repos.updateRelease({ ...target, prerelease: false, body });
   }
 };
