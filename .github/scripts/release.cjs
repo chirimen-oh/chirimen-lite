@@ -23,7 +23,7 @@ module.exports = async function ({ version, github, context, glob }) {
     const name = path.basename(file).replace(/^image_/, "");
     const data = await fs.readFile(file);
 
-    await github.repos.uploadReleaseAsset({
+    await github.rest.repos.uploadReleaseAsset({
       ...target,
       name,
       data,
