@@ -1,0 +1,2 @@
+#!/bin/sh
+exec libcamera-still --verbose=0 "$@"
