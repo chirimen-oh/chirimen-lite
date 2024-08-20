@@ -10,13 +10,13 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build.
         run: |
           depends=$(sed -f scripts/remove-comments.sed -e 's/[^ ]*://g' depends)
           sudo apt-get install $depends
           sudo ./build.sh
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         with:
           script: |
             const script = require("./.github/scripts/release.cjs");
