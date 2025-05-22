@@ -8,7 +8,7 @@ on:
         required: true
 jobs:
   main:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/arm64'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
