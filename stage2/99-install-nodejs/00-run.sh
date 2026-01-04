@@ -10,7 +10,7 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get -o Acquire::Retries=3 install -y nodejs
 
 sudo -u#1000 npm config set prefix '/home/${FIRST_USER_NAME}/.local'
-sudo -u#1000 npm install -g forever jiti
+sudo -u#1000 npm install -g forever
 sudo -u#1000 npm --prefix '/home/${FIRST_USER_NAME}/myApp' install
 sudo -u#1000 ln -fsv myApp/node_modules '/home/${FIRST_USER_NAME}/node_modules'
 EOF
