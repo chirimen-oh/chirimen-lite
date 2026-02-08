@@ -6,7 +6,9 @@ const crypto = require("node:crypto");
 /** actions/github-script でのリリース成果物のアップロード */
 module.exports = async function ({ version, ref, github, context, glob }) {
   // Extract branch name from ref (e.g., refs/heads/master -> master)
-  const branch = ref ? ref.replace(/^refs\/heads\//, "") : undefined;
+  // Use context.ref as fallback if ref is not provided
+  const branchRef = ref || context.ref;
+  const branch = branchRef ? branchRef.replace(/^refs\/heads\//, "") : undefined;
   
   const { data: release } = await github.rest.repos.createRelease({
     ...context.repo,
