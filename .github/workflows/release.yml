@@ -22,6 +22,7 @@ jobs:
           script: |
             const script = require("./.github/scripts/release.cjs");
             const version = process.env.VERSION;
-            await script({ version, github, context, glob });
+            const ref = process.env.GITHUB_REF;
+            await script({ version, ref, github, context, glob });
         env:
           VERSION: "${{ github.event.inputs.version }}"
