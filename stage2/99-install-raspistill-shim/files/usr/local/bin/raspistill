@@ -1,2 +1,2 @@
 #!/bin/sh
-exec libcamera-still --verbose=0 "$@"
+exec rpicam-still --verbose=0 "$@"
